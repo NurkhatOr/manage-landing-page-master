@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as var;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: var.$fs-100;
+  text-align: center;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.container {
+  max-width: 68.75rem;
+  margin-inline: auto;
+  padding: 2.8125rem 1.125rem;
+
+  &--pY {
+    padding-block: 2.8125rem;
+  }
+
+  &--pX {
+    padding-inline: 1.125rem;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.bg-red {
+  background-color: hsl((var.$bg-red));
+}
+
+.bg-dblue {
+  background-color: hsl((var.$bg-dblue));
+}

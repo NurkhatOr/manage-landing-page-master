@@ -1,0 +1,79 @@
+@use "../util/" as u;
+@use "../abstracts/variables" as var;
+
+.management {
+  @include u.breakpoint-up(large) {
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__numbered {
+    flex: 1;
+  }
+}
+
+.management__text--title {
+  line-height: 1.3;
+  margin-bottom: 0.8em;
+
+  @include u.breakpoint-up(large) {
+    font-size: var.$fs-400;
+  }
+}
+
+.management__text--paragraph {
+  max-width: 32ch;
+  line-height: 2;
+  margin-inline: auto;
+  margin-bottom: 3em;
+
+  @include u.breakpoint-up(large) {
+    max-width: 33ch;
+    margin-inline: 0;
+  }
+}
+
+.management__numbered {
+  h3 {
+    text-align: left;
+    margin-right: -18px;
+    padding: 0.5em 1em;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    background-color: var.$fc-pred;
+
+    @include u.breakpoint-up(large) {
+      margin: 0;
+      background-color: transparent;
+    }
+  }
+
+  span {
+    position: relative;
+    right: 1em;
+    background-color: hsl(var.$bg-red);
+    color: #fff;
+    border-radius: 3em;
+    margin-right: 1em;
+    padding: 0.5em 1em;
+  }
+
+  p {
+    line-height: 2;
+    max-width: 40ch;
+    margin-inline: auto;
+    margin-bottom: 3em;
+
+    @include u.breakpoint-up(large) {
+      margin-left: 6.25em;
+      max-width: 70ch;
+    }
+  }
+}

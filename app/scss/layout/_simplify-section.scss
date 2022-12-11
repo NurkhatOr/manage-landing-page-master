@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as var;
+@use "../util/breakpoints" as u;
+
+.simplify {
+  background-color: hsl(var.$bg-red);
+
+  .container {
+    padding-top: 6.5rem;
+    padding-bottom: 5.625rem;
+    color: #fff;
+
+    @include u.breakpoint-up(large) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  div:last-child {
+    & button {
+      background-color: #fff;
+      flex: 1;
+
+      a {
+        color: red;
+      }
+    }
+  }
+}
+
+@include u.breakpoint-up(large) {
+  .simplify h1 {
+    margin: 0;
+    width: 20ch;
+  }
+}
