@@ -15,4 +15,5 @@ I would be very thankful for your reviews and suggestions.
 
 
 EDIT: 
-Background image is back now. The problem was in the wrong path to the background image in the compiled CSS file. The URL path was addresed relative to the SCSS file where I was working but not relative to the compiled CSS file. So I have changed the path in the CSS file and it works now. I thought that scss compiler does it automatically but I was wrong. 
+Background image is back now. The problem was in the wrong path to the background image in the compiled CSS file. The URL path was addresed relative to the SCSS file where I was working but not relative to the compiled CSS file. So I have changed the path in the CSS file and it works now. I thought that scss compiler does it automatically but I was wrong.
+But why the background image worked when I opened page via Live Server?
